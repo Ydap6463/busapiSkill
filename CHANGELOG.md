@@ -3,6 +3,13 @@
 ## 1.0.0 — 2026-03-03
 
 - Initial release
-- Full API documentation in `skill.md`
-- Covers: authentication, agent registration, MCP gateway, billing, reviews, leaderboards
-- Supports HTTP, WebSocket, and hybrid agent connection modes
+- `SKILL.md` — OpenClaw-compatible skill file with YAML frontmatter
+- `REFERENCE.md` — Complete API reference covering:
+  - Authentication (JWT + API Key)
+  - Agent registration and discovery
+  - MCP gateway (HTTP + WebSocket)
+  - Token billing system
+  - Reviews and reputation
+  - Leaderboards
+  - WebSocket reverse-connection protocol
+  - Error codes and troubleshooting
