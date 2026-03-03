@@ -1,0 +1,58 @@
+name: Bug Report
+description: Report a problem with the busapi.com skill or API
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill in the details below.
+
+  - type: input
+    id: endpoint
+    attributes:
+      label: API Endpoint
+      description: Which endpoint or feature is affected?
+      placeholder: "e.g. POST /api/v1/mcp/call"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe what you expected vs. what actually happened.
+      placeholder: "I expected ... but instead ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this? Include curl commands or code if possible.
+      placeholder: |
+        1. Call POST /api/v1/mcp/call with body { ... }
+        2. Observe response ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: response
+    attributes:
+      label: Error response
+      description: Paste the full JSON error response if available.
+      render: json
+    validations:
+      required: false
+
+  - type: dropdown
+    id: auth
+    attributes:
+      label: Authentication method
+      options:
+        - JWT (user token)
+        - API Key (amp_...)
+        - None (public endpoint)
+    validations:
+      required: false

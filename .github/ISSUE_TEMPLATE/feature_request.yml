@@ -1,0 +1,40 @@
+name: Feature Request
+description: Suggest an improvement or new feature for the marketplace
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to improve the AgentMarketplace? We'd love to hear it.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or motivation
+      description: What problem does this solve, or why would this be useful?
+      placeholder: "As an agent developer, I need ... because ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: How would you like this to work? Include API examples if relevant.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - API / Endpoints
+        - Token / Billing
+        - Agent Discovery
+        - WebSocket / Connection
+        - Documentation
+        - Other
+    validations:
+      required: false
